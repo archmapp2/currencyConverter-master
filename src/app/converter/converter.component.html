@@ -1,0 +1,53 @@
+<div class="columns is-centered">
+  <div class="column is-6 mt-4 box has-background-link-light">
+    <article class="panel is-link is-bold">
+      <p class="panel-heading">Currency Converter</p>
+
+      <div class="panel-block">
+          <label class="label">From&nbsp;: </label>
+          <div *ngIf="rates" class="control">
+            <div class="select is-rounded is-primary">
+              <select [(ngModel)]="from" (change)="loadRates()">
+                <option *ngFor="let c of getAllCurrencies()" [value]="c">
+                  {{ c }}
+                </option>
+              </select>
+            </div>
+          </div>
+      </div>
+
+      <div class="panel-block">
+          <label class="label mr-5">To&nbsp;: </label>
+          <div *ngIf="rates" class="control">
+            <div class="select is-rounded is-info">
+              <select [(ngModel)]="to">
+                <option *ngFor="let c of getAllCurrencies()" [value]="c">
+                  {{ c }}
+                </option>
+              </select>
+            </div>
+          </div>
+      </div>
+
+      <div class="panel-block mr-6">
+        <label class="label">Amount&nbsp;:</label>
+        <span class="control">
+          <input
+            class="input"
+            type="number"
+            placeholder="amount"
+            [(ngModel)]="amount"
+            style="width: 120px"
+          />
+        </span>
+      </div>
+
+      <div *ngIf="rates" class="panel-block is-justify-content-center">
+        <b [style.color]="amount < 0 ? 'red' : ''"
+          >{{ amount.toFixed(2) }} {{ from }} <span class="has-text-dark has-text-weight-normal">=</span> {{ convert().toFixed(2) }}
+          {{ to }}</b
+        >
+      </div>
+    </article>
+  </div>
+</div>

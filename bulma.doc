@@ -1,0 +1,29 @@
+
+npm i bulma bulma-toast
+npm i bulma-extensions
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css"
+    />
+
+
+
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bulmaswatch/solar/bulmaswatch.min.css"
+    />
+
+
+
+https://bulma.io/extensions/
